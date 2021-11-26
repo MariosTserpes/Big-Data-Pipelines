@@ -23,7 +23,7 @@ def configure_session(master_node = None, name = None):
 def ETL_processes(dataset = None):
     global df_load, max_actual_per_day_2019, avg_actual_jan_to_april, freq_per_month
     
-    df_load = spark.read.csv(r"{dataset}", header = True)
+    df_load = spark.read.csv(f"{dataset}", header = True)
     column_to_drop = ['day']
     df_load = df_load.drop(*column_to_drop)
     
@@ -47,5 +47,6 @@ def ETL_processes(dataset = None):
     print("Loading into Mongo have been completed!")
 
 if __name__ == '__main__':
+    
     configure_session("local", "ETL_project")
     ETL_processes("C:\marios\datasets\boston_temp.csv")
