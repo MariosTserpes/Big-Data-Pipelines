@@ -1,0 +1,4 @@
+install third parties libraries ----> pymongo - pandas - numpy
+install apache spark 
+install Java 8 SE Development Kit
+install MongoDB & NoSQL Booster for MongoDB
